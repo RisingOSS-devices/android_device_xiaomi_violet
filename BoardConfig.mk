@@ -71,6 +71,7 @@ BOARD_RAMDISK_OFFSET := 0x01000000
 # Neutron Clang
 TARGET_KERNEL_CLANG_VERSION := neutron
 TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-neutron
+KERNEL_CC := CC=$(shell pwd)/prebuilts/clang/host/linux-x86/clang-$(TARGET_KERNEL_CLANG_VERSION)/bin/clang
 
 # Platform
 TARGET_BOARD_PLATFORM := sm6150
