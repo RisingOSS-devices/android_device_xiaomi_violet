@@ -206,6 +206,9 @@ persist.vendor.qg_cold_temp=-150
 # RCS
 persist.rcs.supported=0
 
+# Filesystem
+fs_mgr.overlayfs.prefer_cache_backing_storage=true
+
 # Radio/RIL
 persist.radio.multisim.config=dsds
 persist.vendor.qti.telephony.vt_cam_interface=2
