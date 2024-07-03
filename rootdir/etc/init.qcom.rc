@@ -170,6 +170,10 @@ on init
     # Set low memory killer minfree values
     write /sys/module/lowmemorykiller/parameters/minfree
 
+    # Configure thermal trip points
+    write /sys/class/thermal/thermal_zone0/trip_point_0_temp 95
+    write /sys/class/thermal/thermal_zone0/trip_point_1_temp 100
+
 on fs
     mount_all /vendor/etc/fstab.qcom --early
     chown root system /mnt/vendor/persist
