@@ -28,3 +28,13 @@ dalvik.vm.bg-dexopt=true
 # Minimize GC pauses
 dalvik.vm.dex2oat-Xms64m
 dalvik.vm.dex2oat-Xmx512m
+
+# LMK properties
+ro.lmk.debug=false
+ro.lmk.critical_upgrade=true
+ro.lmk.upgrade_pressure=80
+ro.lmk.downgrade_pressure=60
+
+# Set the minimum and maximum LMK kill thresholds (values in MB)
+ro.lmk.kill_threshold_min=1536
+ro.lmk.kill_threshold_max=4096
