@@ -164,6 +164,12 @@ on init
     write /proc/sys/kernel/sched_lib_name "libunity.so,com.miHoYo.,libfb.so,liblogic.so,libssgamesdkcronet.so,libil2cpp.so,com.activision.,com.tencent."
     write /proc/sys/kernel/sched_lib_mask_force 255
 
+    # Disable thermal throttling for performance
+    write /sys/module/msm_thermal/core_control/enabled 0
+
+    # Set low memory killer minfree values
+    write /sys/module/lowmemorykiller/parameters/minfree
+
 on fs
     mount_all /vendor/etc/fstab.qcom --early
     chown root system /mnt/vendor/persist
