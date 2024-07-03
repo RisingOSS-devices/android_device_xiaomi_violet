@@ -19,6 +19,10 @@ dalvik.vm.dex2oat-filter=speed
 dalvik.vm.image-dex2oat-filter=speed
 dalvik.vm.usejitprofiles=true
 
+# Disable kernel panic for better stability
+ro.kernel.android.checkjni=0
+ro.kernel.checkjni=0
+
 # Enable dalvik VM's experimental features
 dalvik.vm.dexopt-flags=m=y
 
@@ -38,3 +42,16 @@ ro.lmk.downgrade_pressure=60
 # Set the minimum and maximum LMK kill thresholds (values in MB)
 ro.lmk.kill_threshold_min=1536
 ro.lmk.kill_threshold_max=4096
+
+# Reduce the delay before killing inactive processes
+persist.sys.purgeable_assets=1
+
+# Improve scrolling responsiveness
+ro.max.fling_velocity=12000
+ro.min.fling_velocity=8000
+
+# Miscellaneous performance tweaks
+persist.service.lgospd.enable=0
+persist.service.pcsync.enable=0
+persist.service.mount.playsnd=0
+ro.config.nocheckin=1
