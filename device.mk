@@ -6,7 +6,7 @@
 #
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Enable project quotas and casefolding for emulated storage without sdcardfs
@@ -185,6 +185,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libstagefright_softomx.vendor
 
+# OMX
+PRODUCT_PACKAGES += \
+    android.hardware.media.omx@1.0-service \
+    libstagefright_omx.vendor \
+    libavservices_minijail \
+    libavservices_minijail.vendor
+
 # Dolby
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml
@@ -241,7 +248,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1-impl-qti \
     android.hardware.gnss@2.1-service-qti \
-    libavservices_minijail.vendor \
     libbatching \
     libgeofencing \
     libgnss
