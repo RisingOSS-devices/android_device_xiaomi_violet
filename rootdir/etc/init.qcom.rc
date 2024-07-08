@@ -167,9 +167,6 @@ on init
     # Disable thermal throttling for performance
     write /sys/module/msm_thermal/core_control/enabled 0
 
-    # Set low memory killer minfree values
-    write /sys/module/lowmemorykiller/parameters/minfree
-
     # Configure thermal trip points
     write /sys/class/thermal/thermal_zone0/trip_point_0_temp 95
     write /sys/class/thermal/thermal_zone0/trip_point_1_temp 100
