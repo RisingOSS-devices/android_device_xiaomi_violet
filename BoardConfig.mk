@@ -73,6 +73,11 @@ TARGET_KERNEL_CLANG_VERSION := neutron
 TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-neutron
 KERNEL_CC := CC=$(shell pwd)/prebuilts/clang/host/linux-x86/clang-$(TARGET_KERNEL_CLANG_VERSION)/bin/clang
 
+# Global LTO
+TARGET_GLOBAL_LTO := thin
+TARGET_GLOBAL_OPTIMIZATION := O3
+TARGET_GLOBAL_THINLTO := true
+
 # Platform
 TARGET_BOARD_PLATFORM := sm6150
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno612
